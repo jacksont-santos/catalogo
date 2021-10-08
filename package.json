@@ -1,0 +1,27 @@
+{
+  "name": "catalogo",
+  "version": "1.0.0",
+  "description": "Projeto final do módulo 2.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacksont-santos/catalogo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacksont-santos/catalogo/issues"
+  },
+  "homepage": "https://github.com/jacksont-santos/catalogo#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
