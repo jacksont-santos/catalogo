@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title> noName| Cadastro</title>
+</head>
+<body>
+
+    <nav>
+        <article>
+            <img src="/img/cadastro.png" alt="">
+            <h1><a href="/">noName</a></h1>
+        </article>
+        
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/subscription">Cadastro</a></li>
+            <li><a href="/editar">Editar</a></li>
+            <li><a href="/remover">Remover</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Cadastre um Lançamento</h1>
+    </header>
+
+    <section id="cadastrar">
+        <form action="/subscription" method="POST">
+            <div>
+                <label for="ano">Ano de Lançamento: </label>
+                <input type="text" name="ano" id="ano" placeholder="Digite o Lançamento" required>
+            </div>
+
+            <div>
+                <label for="nome">Nome do Filme/Série: </label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o Nome" required>
+            </div>
+    
+            <div>
+                <label for="genero">Gênero: </label>
+                <input type="text" name="genero" id="genero" placeholder="Digite o Gênero" required>
+            </div>
+    
+            <div>
+                <label for="imagem">Capa do Lançamento: </label>
+                <input type="text" name="imagem" id="imagem" placeholder="Digite o link da Capa/imagem" required>
+            </div>
+
+            <div>
+                <label for="produtora">Produtora: </label>
+                <input type="text" name="produtora" id="produtora" placeholder="Digite a Produtora" required>
+            </div>
+
+            <div>
+                <label for="duracao">Duração: </label>
+                <input type="text" name="duracao" id="duracao" placeholder="Digite a Duração" required>
+            </div>
+    
+            <button type="submit">Cadastrar Lançamento</button>
+        </form>
+    </section>
+
+</body>
+</html>
