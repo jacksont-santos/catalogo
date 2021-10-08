@@ -1,17 +1,50 @@
 const express = require("express");
-const path = require("path");
-
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+const path = require("path");
+const pokedex =[];
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded());
+
+
+let message = " ";
 
 app.get("/", (req, res) => {
-  res.render("index");
+  
+
+  setTimeout(() => {
+    message = "";
+  }, 1000);
+
+  res.render("index", { 
+    pokedex,
+    message,
+  });
+});
+
+app.get("/registration", (req, res) => {
+  res.render("cadastro");
+});
+
+app.post("/subscription", (req, res) => {
+  const pokemon = req.body
+  pokedex.push(pokemon);
+  message = `Parabéns ${pokemon.nome} , foi adicionado na sua POKEDEX`;
+  res.redirect("/");
+});
+
+app.get("/details" , (req, res) => {
+  res.render("details");
+  res.redirect("/")
+});
+
+app.get("/details0" , (req, res) => {
+  res.render("details");
+  res.redirect("/")
 });
 
 
-app.listen(port, () =>
-  console.log(`Servidor rodando em http://localhost:${port}`)
-);
+app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
+
