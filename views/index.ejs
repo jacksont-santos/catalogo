@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pr-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
     <title></title>
 </head>
 <body>
+    <% if(message != "") {  %>
+        <section id="message">
+            <p><%= message %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
     <nav>
         <article>
             <img src="" alt="">
@@ -17,60 +19,22 @@
         </article>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/cadastro">Cadastrar</a></li>
-            <li><a href="/editar">Editar</a></li>
-            <li><a href="/remover">Remover</a></li>
+            <li><a href="/criar">Cadastrar</a></li>
+            <li><a href="/atualizar">Editar</a></li>
+            <li><a href="/atualizar">Remover</a></li>
         </ul>
     </nav>
         <section class="main-container" >
       <div class="location" id="home">
-          <h1 id="home"></h1>
-          <div class="box">
-            <a href=""><img src="/img/13r.png" alt=""></a>
-            <a href=""><img src="/img/agents.png" alt=""></a>
-            <a href=""><img src="/img/arrested.png" alt=""></a>
-            <a href=""><img src="/img/bourne.png" alt=""></a>
-            <a href=""><img src="/img/black.png" alt=""></a>
-            <a href=""><img src="/img/boss.png" alt=""></a>    
-            <a href=""><img src="/img/brain.png" alt=""></a>
-            <a href=""><img src="/img/cook.png"></a>
-            <a href=""><img src="/img/bright.png" alt=""></a>
-            <a href=""><img src="/img/cavena.png" alt=""></a>
-            <a href=""><img src="/img/club.png" alt=""></a>
-            <a href=""><img src="/img/eye.png" alt=""></a>        
-            <a href=""><img src="/img/five.png" alt=""></a>
-            <a href=""><img src="/img/flash.png" alt=""></a>
-            <a href=""><img src="/img/glx.png" alt=""></a>
-            <a href=""><img src="/img/greys.png" alt=""></a>
-            <a href=""><img src="/img/gun.png" alt=""></a>
-            <a href=""><img src="/img/jessica.png" alt=""></a>
-            <a href=""><img src="/img/kiss.png" alt=""></a>
-            <a href=""><img src="/img/lost.png" alt=""></a>
-            <a href=""><img src="/img/luke.png" alt=""></a>
-            <a href=""><img src="/img/marcella.png" alt=""></a>
-            <a href=""><img src="/img/marlon.png" alt=""></a>
-            <a href=""><img src="/img/national.png" alt=""></a>
-            <a href=""><img src="/img/never.png" alt=""></a>
-            <a href=""><img src="/img/night.png" alt=""></a>
-            <a href=""><img src="/img/papel.png" alt=""></a>
-            <a href=""><img src="/img/penny.png" alt=""></a>
-            <a href=""><img src="/img/queen.png" alt=""></a>
-            <a href=""><img src="/img/queer.png" alt=""></a>
-            <a href=""><img src="/img/ranch.png" alt=""></a>
-            <a href=""><img src="/img/river.png" alt=""></a>
-            <a href=""><img src="/img/road.png" alt=""></a>
-            <a href=""><img src="/img/staircase.png" alt=""></a>
-            <a href=""><img src="/img/step.png" alt=""></a>
-            <a href=""><img src="/img/wanted.png" alt=""></a>
-            <a href=""><img src="/img/war.png" alt=""></a>
-            <a href=""><img src="/img/week.png" alt=""></a>
-            <a href=""><img src="/img/wynonna.png" alt=""></a>
-
-
-
-
+            <% listafilme.forEach(item => { %>
+            <div class="box">
+                <a href="/details/<%= item.id %>"><img src=<%= item.imagem %> alt=""></a>
+                <figcaption><%= item.nome %></figcaption>
+                <figcaption><%= item.genero %></figcaption>
+                <a href="/editar/<%= item.id %>"> Editar</a>
+            </div>
+            <% }) %>
           </div>
-      </div> -->
-      
+      <script src="/js/script2.js"></script>
 </body>
 </html>

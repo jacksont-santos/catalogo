@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+</head>
+<body>
+    <nav>
+        <article>
+            <img src="" alt="">
+            <h1><a href="/">noName</a></h1>
+        </article>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/criar">Cadastrar</a></li>
+            <li><a href="/atualizar">Remover</a></li>
+        </ul>
+    </nav>
+        <section class="main-container" >
+      <div class="location" id="home">
+            <div class="box">
+                <div>
+                    <img id="im" src="<%= dfilme.imagem %>" >
+                </div>
+                <div>
+                    <h2>NOME:</h2>
+                    <p><%= dfilme.nome %></p>
+                    <h2>ANO:</h2>
+                    <p><%= dfilme.ano %></p>
+                    <h3>GÊNERO:</h3>
+                    <p><%= dfilme.genero %></p>
+                    <h2>PRODUTORA:</h2>
+                    <p><%= dfilme.produtora %></p>
+                    <h2>DURAÇÃO:</h2>
+                    <p><%= dfilme.duracao %></p>
+                </div>
+                <form action="/deletar/<%= dfilme.id %>" method="POST">
+                    <button type="submit">DELETAR</button>
+                </form>
+          </div>
+      <script src="/js/script2.js"></script>
+</body>
+</html>

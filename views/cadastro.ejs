@@ -8,6 +8,11 @@
     <title> noName| Cadastro</title>
 </head>
 <body>
+    <% if(message != "") {  %>
+        <section id="message">
+            <p><%= message %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
 
     <nav>
         <article>
@@ -18,8 +23,8 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/subscription">Cadastro</a></li>
-            <li><a href="/editar">Editar</a></li>
-            <li><a href="/remover">Remover</a></li>
+            <li><a href="/atualizar">Editar</a></li>
+            <li><a href="/atualizar">Remover</a></li>
         </ul>
     </nav>
 
@@ -28,7 +33,7 @@
     </header>
 
     <section id="cadastrar">
-        <form action="/subscription" method="POST">
+        <form action="/new" method="POST">
             <div>
                 <label for="ano">Ano de Lançamento: </label>
                 <input type="text" name="ano" id="ano" placeholder="Digite o Lançamento" required>
@@ -62,6 +67,6 @@
             <button type="submit">Cadastrar Lançamento</button>
         </form>
     </section>
-
+    <script src="/js/script2.js"></script>
 </body>
 </html>

@@ -1,14 +1,13 @@
 .menu { width:100%; }
 
-* {
+ *{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
-  }
+    background-color:black;
+  } 
   
   body {
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -24,13 +23,14 @@
     width: 100%;
     z-index: 10;
     top: 0;
-    gap: 40rem;
+    gap: 2rem;
     overflow: hidden;
     text-shadow: 0rem 0rem 1.8rem red;
   }
-  
-  nav img {
-    width: 6rem;
+  .cima
+  {
+    width: 5rem;
+    height: 6rem;
     padding-left: 0.5rem;
   }
   
@@ -40,14 +40,14 @@
   }
   
   nav ul li {
-    padding: 1rem;
+    padding: 2.5rem;
   }
   
   nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     transition: 0.5s;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
@@ -65,6 +65,10 @@
   nav article h1 a {
       color: white;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 1.6rem;
+      transition: 0.5s;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   nav article img {
@@ -86,16 +90,22 @@
     text-align: center;
   }
   
-  
+  .cad
+  {
+    width: 3rem;
+    height: 3rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 
   section#cadastrar {
     padding: 1rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 20rem 10rem 20rem;
-    box-shadow: 0 0 1rem #00000060;
-    border-radius: 20rem;
+    margin: 0 10rem 0 10rem;
+    border-radius: 5rem;
+    background-color: black;
   }
 
   section#cadastrar h2 {
@@ -106,19 +116,20 @@
     width: 100%;
   }
 
-  /* section#cadastrar form {
+  section#cadastrar form {
     width: 100%;
     padding: 5rem;
-  } */
+  }
 
   section#cadastrar form div input {
     width: 100%;
-    padding: 2rem;
-    font-size: 1.3rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    margin-top: 0.1rem;
+    margin-bottom: 2rem;
     outline: none;
     border: 0.1rem solid #ccc;
+    background-color: whitesmoke;
   }
 
   section#cadastrar form div label {
@@ -126,10 +137,11 @@
     color:red;
     font-style:italic;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
   }
 
   section#cadastrar form button {
-    border: 1px solid black;
+    border: 1px solid red;
     background-color: black;
     color: red;
     padding: 1rem;
@@ -151,9 +163,9 @@
   }
 
   section#message {
-    padding: 1rem;
-    background-color: rgb(197, 255, 214);
-    color: black;
+    padding: 2rem;
+    background-color:rgba(0, 0, 0, 0.288);
+    color: white;
     position: fixed;
     top: 5rem;
     right: 2rem;
@@ -170,13 +182,11 @@
   span#close {
     font-size: 2rem;
     cursor: pointer;
-    transition: 0.3s;
-    padding-left: 2rem;
   }
   
   span#close:hover {
     color: rgb(255, 0, 0);
-    transform: scale(1.2);
+    transform: scale(1.2);    
   }
 
   section#details {
@@ -187,7 +197,7 @@
     background-color: rgba(252, 255, 82, 0.849);
     border-radius: 2rem;
     padding: 3rem;
-    box-shadow: 0 0 1rem #00000060;
+
   }
   
   section#details div#infos p {
@@ -230,13 +240,14 @@
   }
 
   .main-container {
-    padding: 2rem;
+    padding: 3rem;
   }
   
   .box {
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(6, minmax(100px, 1fr));
+    gap: 2.5rem;
   }
   
   .box a {
@@ -247,10 +258,152 @@
     transition: transform .3s;
     -ms-transform: scale(1.4);
     -webkit-transform: scale(1.4);  
-    transform: scale(1.4);
+    transform: scale(1.2);
+    box-shadow: 0px 0px 18000px red;
   }
   
   .box img {
     border-radius: 1.5rem;
+    width: 70%;
   }
   
+
+ul,li 
+{
+  list-style-type: none;
+}
+
+.clicavel {
+  cursor: pointer;
+}
+
+.DeleteButton {
+  color: black;
+  font-weight: bold;
+  background-color: darkred;
+  margin-right: 10px;
+  border-radius: 1rem;
+
+}
+
+a.card {
+  width: 2rem;
+  padding: 2rem;
+  box-shadow: 0 0 1rem #00000060;
+  border-radius: 1rem;
+  display: flexbox;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.5s;
+  color: #000;
+  align-content: flex-start;
+  font-size: 1.50rem;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+  line-height: 7rem;
+}
+
+a.card
+{
+  transition: transform .3s; 
+}
+
+a.card:hover {
+  transition: transform .3s;
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4);  
+  transform: scale(1.2);
+}
+
+a.card img {
+  max-width: 15rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;  
+}
+
+table{
+  width: 50%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+tr {
+  border-bottom: 1px solid black;
+  background-color: white;
+}
+th, td{
+  border: none;
+  height: 10px;
+  padding: 2px;
+}
+tr:hover {
+  background: #F5F5F5;
+}
+
+form {
+  width: 45%;
+  margin: 50px auto;
+  text-align: center;
+  padding: 30px; 
+  border: 1px solid #bbbbbb; 
+  border-radius: 5px;
+}
+
+.input-group {
+  margin: 10px 0px 10px 0px;
+  background-color: black;
+
+}
+.input-group label {
+  font-size: 1.5rem;
+  color:red;
+  font-style:italic;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 900;
+}
+.input-group input {
+  height: 30px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background-color: aliceblue;
+}
+.btn {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.edit_btn {
+  text-decoration: none;
+  padding: 2px 5px;
+  background: blue;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.del_btn {
+  text-decoration: none;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 3px;
+  background: red;
+}
+.msg {
+  margin: 30px auto; 
+  padding: 10px; 
+  border-radius: 5px; 
+  color: #3c763d; 
+  background: #dff0d8; 
+  border: 1px solid #3c763d;
+  width: 50%;
+  text-align: center;
+}
