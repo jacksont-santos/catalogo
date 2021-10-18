@@ -15,7 +15,6 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/criar">Cadastrar</a></li>
-            <li><a href="/atualizar">Remover</a></li>
         </ul>
     </nav>
         <section class="main-container" >
@@ -33,13 +32,13 @@
                     <p><%= dfilme.genero %></p>
                     <h2>PRODUTORA:</h2>
                     <p><%= dfilme.produtora %></p>
-                    <h2>DURAÇÃO:</h2>
-                    <p><%= dfilme.duracao %></p>
+                    <h2>DESCRIÇÃO:</h2>
+                    <p><%= dfilme.descricao %></p>
                 </div>
                 <form action="/deletar/<%= dfilme.id %>" method="POST">
                     <button type="submit">DELETAR</button>
                 </form>
           </div>
-      <script src="/js/script2.js"></script>
+      <script src="/js/script.js"></script>
 </body>
 </html>

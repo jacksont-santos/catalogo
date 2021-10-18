@@ -19,9 +19,7 @@
   
   <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/subscription">Cadastro</a></li>
-      <li><a href="/atualizar">Editar</a></li>
-      <li><a href="/atualizar">Remover</a></li>
+      <li><a href="/criar">Cadastro</a></li>
   </ul>
 </nav>
 	<form action="/peditar/<%= filme.id %>" method="POST">
@@ -46,14 +44,14 @@
 			<input type="text" name="produtora" value="">
 		</div>
 		<div class="input-group">
-			<label>Duração</label>
-			<input type="text" name="duracao" value="">
+			<label>Descrição</label>
+			<input type="text" name="descricao" value="">
 		</div>
 		<div class="input-group">
 	<button class="btn" type="submit" name="update" style="background: green;" >update</button>
 	<button class="btn" type="submit" name="save" >Save</button>
 		</div>
 	</form>
-	<script src="/js/script2.js"></script>
+	<script src="/js/script.js"></script>
 </body>
 </html>
