@@ -36,7 +36,7 @@ app.post("/new", async (req, res) => {
   }  else if (!produtora) {
     res.render("cadastro", {message: "Produtora é obrigatório",});
   }  else if (!descricao) {
-    res.render("cadastro", {message: "Duração é obrigatório",});
+    res.render("cadastro", {message: "Descrição é obrigatório",});
   } else {
     try {
     const novo = await Filme.create({
