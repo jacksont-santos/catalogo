@@ -28,11 +28,10 @@ const Filme = database.define("filmes", {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  duracao: {
+  descricao: {
     type: Sequelize.STRING,
-    allowNull: false,
+    allowNull: true,
   },
- // descricao: Sequelize.STRING,
 },
 {
   freezeTableName: true,
