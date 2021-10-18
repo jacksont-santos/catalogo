@@ -24,7 +24,7 @@ app.get("/criar", (req, res) => {
 });
 
 app.post("/new", async (req, res) => {
-  const { ano, nome, genero, imagem, produtora, duracao} = req.body;
+  const { ano, nome, genero, imagem, produtora, descricao} = req.body;
   if (!ano) {
     res.render("cadastro", {message: "O ano é obrigatório",});
   } else if (!nome) {
@@ -35,12 +35,12 @@ app.post("/new", async (req, res) => {
     res.render("cadastro", {message: "Imagem é obrigatório",});
   }  else if (!produtora) {
     res.render("cadastro", {message: "Produtora é obrigatório",});
-  }  else if (!duracao) {
+  }  else if (!descricao) {
     res.render("cadastro", {message: "Duração é obrigatório",});
   } else {
     try {
     const novo = await Filme.create({
-      ano, nome, genero, imagem, produtora, duracao
+      ano, nome, genero, imagem, produtora, descricao
      });
     message = ` O Filme ${nome} foi cadastrado com sucesso!`;
     res.redirect("/");
@@ -64,14 +64,14 @@ app.get("/editar/:id", async (req, res) => {
   app.post("/peditar/:id", async (req, res) => {
     const epfilme = await Filme.findByPk(req.params.id);
   
-    const { ano, nome, genero, imagem, produtora, duracao} = req.body;
+    const { ano, nome, genero, imagem, produtora, descricao} = req.body;
   
     epfilme.ano = ano;
     epfilme.nome = nome;
     epfilme.genero = genero;
     epfilme.imagem = imagem;
     epfilme.produtora = produtora;
-    epfilme.duracao = duracao;
+    epfilme.descricao = descricao;
   
     const filmeEditado = await epfilme.save();
     message = "Filme editado com sucesso!";
