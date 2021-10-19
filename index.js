@@ -81,7 +81,7 @@ app.get("/editar/:id", async (req, res) => {
 app.get("/details/:id", async (req, res) => {
   const dfilme = await Filme.findByPk(req.params.id);
   res.render("detalhes",{
-    dfilme
+    dfilme, message
   });
 });
 
