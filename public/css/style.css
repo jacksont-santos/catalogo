@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:black;
   } 
   
   body {
@@ -13,6 +12,7 @@
     min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
+    background-color:black;
   }
 
   nav {
@@ -79,13 +79,13 @@
   }
 
   header {
-    padding-top: 7rem;
-    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 10rem;
   }
   
   header h1 {
     color: black(255, 255, 255);
-    font-size: 6rem;
+    font-size: 5rem;
     text-shadow: 0rem 0rem 1.5rem red;
     text-align: center;
   }
@@ -243,57 +243,18 @@
     padding: 3rem;
   }
   
-  .box {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(6, minmax(100px, 1fr));
-    gap: 2.5rem;
-  }
-  
-  .box a {
-    transition: transform .3s;  
-  }
-  
-  .box a:hover {
-    transition: transform .3s;
-    -ms-transform: scale(1.4);
-    -webkit-transform: scale(1.4);  
-    transform: scale(1.2);
-    box-shadow: 0px 0px 18000px red;
-  }
-  
-  .box img {
-    border-radius: 1.5rem;
-    width: 70%;
-  }
-  
-
 ul,li 
 {
   list-style-type: none;
 }
 
-.clicavel {
-  cursor: pointer;
-}
-
-.DeleteButton {
-  color: black;
-  font-weight: bold;
-  background-color: darkred;
-  margin-right: 10px;
-  border-radius: 1rem;
-
-}
-
 a.card {
   width: 2rem;
   padding: 2rem;
-  box-shadow: 0 0 1rem #00000060;
   border-radius: 1rem;
   display: flexbox;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   cursor: pointer;
   transition: transform 0.5s;
   color: #000;
@@ -316,87 +277,12 @@ a.card:hover {
 }
 
 a.card img {
-  max-width: 15rem;
+  max-width: 12rem;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 100%;  
+  width: 100%;;  
 }
 
-table{
-  width: 50%;
-  margin: 30px auto;
-  border-collapse: collapse;
-  text-align: left;
-}
-tr {
-  border-bottom: 1px solid black;
-  background-color: white;
-}
-th, td{
-  border: none;
-  height: 10px;
-  padding: 2px;
-}
-tr:hover {
-  background: #F5F5F5;
-}
-
-form {
-  width: 45%;
-  margin: 50px auto;
-  text-align: center;
-  padding: 30px; 
-  border: 1px solid #bbbbbb; 
-  border-radius: 5px;
-}
-
-.input-group {
-  margin: 10px 0px 10px 0px;
-  background-color: black;
-
-}
-.input-group label {
-  font-size: 1.5rem;
-  color:red;
-  font-style:italic;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 900;
-}
-.input-group input {
-  height: 30px;
-  width: 93%;
-  padding: 5px 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid gray;
-  background-color: aliceblue;
-}
-.btn {
-  padding: 10px;
-  font-size: 20px;
-  color: white;
-  background: red;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
-}
-.edit_btn {
-  text-decoration: none;
-  padding: 2px 5px;
-  background: blue;
-  color: white;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.del_btn {
-  text-decoration: none;
-  padding: 2px 5px;
-  color: white;
-  border-radius: 3px;
-  background: red;
-}
 .msg {
   margin: 30px auto; 
   padding: 10px; 
@@ -406,4 +292,50 @@ form {
   border: 1px solid #3c763d;
   width: 50%;
   text-align: center;
+}
+
+.content
+{
+  font-size: 30px;
+  justify-content: center;
+  border-radius: 1rem;
+  display: flexbox;
+  cursor: pointer;
+  transition: transform 0.5s;
+  color:black;
+  align-content: center; 
+  background: white;
+}
+
+.box 
+{
+  margin: 0 10rem 0 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  padding: 3rem;
+  gap: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 0rem 0rem 2rem white;
+}
+
+.btn
+{
+  background: red;
+  padding: 15%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.btn2
+{
+  background: green;
+  padding: 15%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 22px;
+  font-style: italic;
 }
