@@ -4,41 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title> JFlix| Detalhes</title>
 </head>
 <body>
     <nav>
         <article>
-            <img src="" alt="">
-            <h1><a href="/">noName</a></h1>
+            <img class="cad" src="/img/ver.png" alt="">
+            <h1><a href="/">JFlix</a></h1>
         </article>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/criar">Cadastrar</a></li>
+            <li><a href="/criar">Cadastro</a></li>
         </ul>
     </nav>
-        <section class="main-container" >
-      <div class="location" id="home">
-            <div class="box">
-                <div>
-                    <img id="im" src="<%= dfilme.imagem %>" >
-                </div>
-                <div>
-                    <h2>NOME:</h2>
-                    <p><%= dfilme.nome %></p>
-                    <h2>ANO:</h2>
-                    <p><%= dfilme.ano %></p>
-                    <h3>GÊNERO:</h3>
-                    <p><%= dfilme.genero %></p>
-                    <h2>PRODUTORA:</h2>
-                    <p><%= dfilme.produtora %></p>
-                    <h2>SINOPSE:</h2>
-                    <p><%= dfilme.descricao %></p>
-                </div>
-                <form action="/deletar/<%= dfilme.id %>" method="POST">
-                    <button type="submit">DELETAR</button>
-                </form>
-          </div>
-      <script src="/js/script.js"></script>
+    <header>
+        <h1><%= dfilme.nome %></h1>
+    </header>
+    <section class="box">
+        <img src="<%= dfilme.imagem %>" width="270"
+        <div class="content">
+            <ul>
+                <li>Ano: <%= dfilme.ano %></li>
+                <li>Gênero: <%= dfilme.genero %></li>
+                <li>Produtora: <%= dfilme.produtora %></li>
+                <li>Sinopse: <%= dfilme.descricao %></li>
+            </ul>
+        </div>
+            <a href="/editar/<%= dfilme.id %>"> <button class="btn2">EDITAR</button></a>
+            <form action="/deletar/<%= dfilme.id %>" method="POST">
+                    <button class="btn" type="submit">DELETAR</button>
+            </form>
+    </section>
+    <script src="/js/script.js"></script>
 </body>
 </html>

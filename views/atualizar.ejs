@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br"></html>
-<html>
+<html lang="pt-br">
 <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
 	<title>JFlix</title>
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 	<% if(message != "") {  %>
@@ -12,46 +14,46 @@
         </section>
     <% }  %>
 	<nav>
-  <article>
-      <img src="/img/cadastro.png" alt="">
-      <h1><a href="/">JFlix</a></h1>
-  </article>
-  
-  <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/criar">Cadastro</a></li>
-  </ul>
-</nav>
-	<form action="/peditar/<%= filme.id %>" method="POST">
-		<div class="input-group">
-			<label>Ano de Lançamento</label>
-			<input type="text" name="ano" value="">
-		</div>
-    <div class="input-group">
-			<label>Nome do Filme/Série:</label>
-			<input type="text" name="nome" value="">
-		</div>
-    <div class="input-group">
-			<label>Gênero:</label>
-			<input type="text" name="genero" value="">
-		</div>
-    <div class="input-group">
-			<label>URL imagem</label>
-			<input type="text" name="imagem" value="">
-		</div>
-    <div class="input-group">
-			<label>Produtora</label>
-			<input type="text" name="produtora" value="">
-		</div>
-		<div class="input-group">
-			<label>Sinopse</label>
-			<input type="text" name="descricao" value="">
-		</div>
-		<div class="input-group">
-	<button class="btn" type="submit" name="update" style="background: green;" >update</button>
-	<button class="btn" type="submit" name="save" >Save</button>
-		</div>
-	</form>
+  		<article>
+      		<img src="/img/cadastro.png" alt="">
+      		<h1><a href="/">JFlix</a></h1>
+  		</article>
+  		<ul>
+      		<li><a href="/">Home</a></li>
+      		<li><a href="/criar">Cadastro</a></li>
+  		</ul>
+	</nav>
+	<section id="cadastrar">
+		<form action="/peditar/<%= filme.id %>" method="POST">
+			<div>
+				<label for="nome">Nome do Filme/Série:</label>
+				<input type="text" name="nome" id="nome" placeholder="Digite o Nome" value="<%= filme.nome %>">
+			</div>
+			<div>
+				<label for="ano">Ano de Lançamento: </label>
+				<input type="text" name="ano" id="ano" placeholder="Digite o Lançamento" value="<%= filme.ano %>">
+			</div>
+    		<div>
+				<label for="genero">Gênero:</label>
+				<input type="text" name="genero" id="genero" placeholder="Digite o Gênero" value="<%= filme.genero %>">
+			</div>
+    		<div>
+				<label for="imagem">Capa do Lançamento:</label>
+				<input type="text" name="imagem" id="imagem" placeholder="Digite o link da Capa/imagem" value="<%= filme.imagem %>">
+			</div>
+    		<div>
+				<label for="produtora">Produtora:</label>
+				<input type="text" name="produtora" id="produtora" placeholder="Digite a Produtora" value="<%= filme.produtora %>">
+			</div>
+			<div>
+				<label for="descricao">Sinopse</label>
+				<input type="text" name="descricao" id="descricao" placeholder="Digite a sinopse do filme" value="<%= filme.descricao %>">
+			</div>
+			<div class="input-group">
+			<button class="btn" type="submit" name="update" style="background: green;" >update</button>
+			</div>
+		</form>
+	</section>
 	<script src="/js/script.js"></script>
 </body>
 </html>

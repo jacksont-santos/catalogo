@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>JFlix</title>
 </head>
 <body>
     <% if(message != "") {  %>
@@ -14,25 +15,20 @@
     <% }  %>
     <nav>
         <article>
-            <img src="" alt="">
-            <h1><a href="/">noName</a></h1>
+            <img class="cima" src="/img/jf.jpg" alt="">
+            <h1><a href="/">JFlix</a></h1>
         </article>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/criar">Cadastrar</a></li>
+            <li><a href="/criar">Cadastro</a></li>
         </ul>
     </nav>
-        <section class="main-container" >
-      <div class="location" id="home">
-            <% listafilme.forEach(item => { %>
-            <div class="box">
-                <a href="/details/<%= item.id %>"><img src=<%= item.imagem %> alt=""></a>
-                <figcaption><%= item.nome %></figcaption>
-                <figcaption><%= item.genero %></figcaption>
-                <a href="/editar/<%= item.id %>"> Editar</a>
-            </div>
-            <% }) %>
-          </div>
-      <script src="/js/script.js"></script>
+    <section class="main-container" >
+        <% listafilme.forEach(item => { %>
+            <a class="card" href="/details/<%= item.id %>">
+                <img src=<%= item.imagem %> alt=""></a>
+        <% }) %>
+    </section>
+    <script src="/js/script.js"></script>
 </body>
 </html>
