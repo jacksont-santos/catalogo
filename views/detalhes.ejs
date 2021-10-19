@@ -8,6 +8,11 @@
     <title> JFlix| Detalhes</title>
 </head>
 <body>
+    <% if(message != "") {  %>
+        <section id="message">
+            <p><%= message %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
     <nav>
         <article>
             <img class="cad" src="/img/ver.png" alt="">
