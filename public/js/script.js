@@ -7,4 +7,11 @@ closeMessage.addEventListener("click", function (){
 
 setTimeout(() => {
     message.style.display = "none"
-}, 5000)
+}, 5000);
+
+function confAtualizar(){
+    confirm("Atualizar?")
+};
+function confDeletar(){
+    confirm("Tem certeza que deseja deletar?")
+};
