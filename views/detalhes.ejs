@@ -38,7 +38,7 @@
         </div>
             <a href="/editar/<%= dfilme.id %>"> <button class="btn2">EDITAR</button></a>
             <form action="/deletar/<%= dfilme.id %>" method="POST">
-                    <button class="btn" type="submit">DELETAR</button>
+                    <button class="btn" type="submit" onclick=confDeletar()>DELETAR</button>
             </form>
     </section>
     <script src="/js/script.js"></script>
