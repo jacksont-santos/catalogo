@@ -296,7 +296,6 @@ a.card img {
 
 .content
 {
-  font-size: 30px;
   justify-content: center;
   border-radius: 1rem;
   display: flexbox;
@@ -306,7 +305,9 @@ a.card img {
   align-content: center; 
   background: white;
 }
-
+.informacoes {
+  font-size: 25px;
+}
 .box 
 {
   margin: 0 10rem 0 10rem;
