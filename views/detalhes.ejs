@@ -30,10 +30,11 @@
         <img src="<%= dfilme.imagem %>" width="270"
         <div class="content">
             <ul>
-                <li>Ano: <%= dfilme.ano %></li>
-                <li>Gênero: <%= dfilme.genero %></li>
-                <li>Produtora: <%= dfilme.produtora %></li>
-                <li>Sinopse: <%= dfilme.descricao %></li>
+                <li class="informacoes">Ano: <%= dfilme.ano %></li>
+                <li class="informacoes">Gênero: <%= dfilme.genero %></li>
+                <li class="informacoes">Produtora: <%= dfilme.produtora %></li>
+                <br/>
+                <li class="informacoes">Sinopse: <%= dfilme.descricao %></li>
             </ul>
         </div>
             <a href="/editar/<%= dfilme.id %>"> <button class="btn2">EDITAR</button></a>
